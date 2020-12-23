@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/zm_bg_float_gray_pressed" android:state_enabled="true" android:state_pressed="true" />
+    <item android:drawable="@drawable/zm_bg_float_gray_pressed" android:state_enabled="true" android:state_selected="true" />
+    <item android:drawable="@drawable/zm_bg_float_gray_pressed" android:state_enabled="true" android:state_focused="true" />
+    <item android:state_enabled="true" android:state_pressed="false">
+        <shape>
+            <corners android:radius="@dimen/zm_margin_small_6dp"/>
+            <solid android:color="@color/zm_transparent" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/zm_bg_float_gray_pressed" android:state_enabled="false" />
+</selector>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.zipow.videobox.AddrBookItemDetailsActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_bottom_sheet_round_rect_bg"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/panelAuthApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnAuthApp"
+                    android:textColor="@color/zm_text_blue_bottom_sheet"
+                    android:textSize="@dimen/zm_font_large_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_text_mfa_use_auth_app_176897"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelSMS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnSms"
+                    android:textColor="@color/zm_text_blue_bottom_sheet"
+                    android:textSize="@dimen/zm_font_large_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_text_mfa_get_code_via_sms_176897" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelRecovry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnRecovery"
+                    android:textColor="@color/zm_text_blue_bottom_sheet"
+                    android:textSize="@dimen/zm_font_large_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_text_mfa_use_recovery_176897" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/panelCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_padding_smaller_size"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/zm_bottom_sheet_round_rect_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnCancel"
+            android:textColor="@color/zm_text_blue_bottom_sheet"
+            android:textSize="@dimen/zm_font_large_size"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_cancel" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/zm_white"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingRight="@dimen/zm_ui_kit_page_left_padding">
+
+    <TextView
+        android:id="@+id/txt_item_recent_search"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        style="@style/ZMTextView.BottomSheetItem"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/zm_ic_search_item_recent_search"
+        android:drawablePadding="@dimen/zm_ui_kit_page_left_padding"
+        android:text="@string/zm_btn_view_more"
+        android:textColor="@color/zm_v2_txt_primary"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"/>
+</LinearLayout>

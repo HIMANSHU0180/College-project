@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dip"
+    android:layout_marginTop="15dip"
+    android:layout_marginRight="15dip"
+    android:layout_marginBottom="15dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/zm_setting_item_padding_top">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/ZMTextView.OnLight.Large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/zm_setting_item_padding_top"
+        android:text="Title" />
+
+
+    <TextView
+        android:id="@+id/txtMsg"
+        style="@style/ZMTextView.OnLight.Medium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Message text" />
+
+    <us.zoom.androidlib.widget.ZMTextButton
+        android:id="@+id/txtLink"
+        style="@style/ZMTextView.OnLight.Medium.Dimmed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/zm_btn_learn_more_115072" />
+    
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelDeleteAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_white"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/zm_sip_select_all_61381"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/zm_ui_kit_btn_normal_round12_white_selector"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:textColor="@color/zm_v2_txt_action"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/clear_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/zm_btn_clear_all_12050"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/zm_ui_kit_btn_normal_round12_white_selector"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:textColor="@color/zm_v2_txt_desctructive"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2sp"
+        android:text="@string/zm_btn_delete_count_169819"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/zm_ui_kit_btn_normal_round12_white_selector"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:textColor="@color/zm_v2_txt_desctructive"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider" />
+
+</RelativeLayout>

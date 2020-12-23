@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/zm_btn_height_24dp"
+    android:background="@drawable/zm_bg_float_gray_normal"
+    android:orientation="horizontal"
+  >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.zipow.videobox.confapp.meeting.confhelper.ZmRecordingBtn
+            android:id="@+id/panelRecordBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_padding_smallest"
+            android:layout_marginRight="@dimen/zm_padding_smallest"
+            />
+        <com.zipow.videobox.confapp.meeting.confhelper.ZmLiveStreamBtn
+            android:id="@+id/panelLiveStream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_padding_smallest"
+            android:layout_marginRight="@dimen/zm_padding_smallest"
+            />
+        <com.zipow.videobox.confapp.meeting.confhelper.ZmBandwidthLimitBtn
+            android:id="@+id/imgBandwidthLimit"
+            android:layout_width="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_height="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_marginLeft="@dimen/zm_padding_small"
+            android:layout_marginRight="@dimen/zm_padding_small"
+            android:contentDescription="@string/zm_accessibility_bandwidth_limit_enable_82445"
+            android:scaleType="fitXY"
+            android:src="@drawable/zm_ic_low_bandwidth"
+            android:focusable="true"
+            />
+
+        <com.zipow.videobox.confapp.meeting.confhelper.ZmAudioWaterMarkBtn
+            android:id="@+id/imgAudioWatermark"
+            android:layout_width="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_height="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_marginLeft="@dimen/zm_padding_small"
+            android:layout_marginRight="@dimen/zm_padding_small"
+            android:contentDescription="@string/zm_accessibility_audio_watermark_70457"
+            android:src="@drawable/zm_ic_audio_watermark"
+            android:focusable="true"
+            />
+        
+        <com.zipow.videobox.confapp.meeting.confhelper.ZmUnmuteBtn
+            android:id="@+id/imgUnmuteBtn"
+            android:layout_width="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_height="@dimen/zm_sip_emergency_top_arc_height"
+            android:layout_marginLeft="@dimen/zm_padding_small"
+            android:layout_marginRight="@dimen/zm_padding_small"
+            android:contentDescription="@string/zm_allow_host_unmute_hint_169817"
+            android:src="@drawable/ic_can_unmute"
+            android:focusable="true"
+            />
+    </LinearLayout>
+    
+</LinearLayout>

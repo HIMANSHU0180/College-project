@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/first"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginStart="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/second"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/second"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/third"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/first"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/third"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginStart="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/fouth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/second"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/fouth"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/fifth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/third"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/fifth"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/sixth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fouth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/sixth"
+        style="@style/ZmTextView"
+        android:layout_width="@dimen/zm_text_normal_width"
+        android:layout_height="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_small_size"
+        android:layout_marginEnd="@dimen/zm_margin_small_size"
+        android:background="@drawable/zm_textview_verify_code_normal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fifth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

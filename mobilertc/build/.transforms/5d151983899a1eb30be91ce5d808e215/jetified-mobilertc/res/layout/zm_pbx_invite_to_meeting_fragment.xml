@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/zm_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btnClose"
+        style="@style/UIKitButton.White.BlueText"
+        android:drawableStart="@drawable/zm_sip_blue_arrow_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/zm_btn_back_to_call_61381" />
+
+    <TextView
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="57dp"
+        android:text="@string/zm_pbx_invite_to_meeting_choose_meeting_131469" />
+
+    <EditText
+        android:id="@+id/meetingLinkEditText"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="@string/zm_pbx_invite_to_meeting_link_hint_131469" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider"/>
+
+    <TextView
+        android:id="@+id/invalidUrlText"
+        style="@style/UIKitTextView.SecondaryText.Medium.warn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/inviteButton"
+        style="@style/UIKitItinactivatedBtn.Large"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:text="@string/zm_btn_invite"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/UIKitTextView.PrimaryText.Normal.Dimmed"
+            android:id="@+id/noScheduledMeetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="133dp"
+            android:text="@string/zm_pbx_invite_to_meeting_no_upcoming_131469"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/scheduledMeetingsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/UIKitTextView.SecondaryText.Medium"
+                android:id="@+id/inviteHintText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/zm_pbx_invite_to_meeting_invite_to_scheduled_131469"/>
+
+            <ListView
+                android:id="@+id/upComingListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

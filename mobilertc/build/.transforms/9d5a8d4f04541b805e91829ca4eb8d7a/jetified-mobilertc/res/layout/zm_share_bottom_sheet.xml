@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_bottom_sheet_round_rect_bg">
+
+    <LinearLayout
+        android:id="@+id/shareItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/share_dropbox"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_dropbox"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/share_one_drive"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_one_drive"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/share_google_drive"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_google_drive"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/share_box"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_box"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/share_image"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_image" />
+
+        <TextView
+            android:id="@+id/share_native_file"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_local_file" />
+
+        <TextView
+            android:id="@+id/share_url"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_url" />
+
+        <TextView
+            android:id="@+id/share_from_bookmark"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_from_bookmark" />
+
+        <TextView
+            android:id="@+id/share_screen"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_screen" />
+
+        <TextView
+            android:id="@+id/share_whiteboard"
+            style="@style/ZMTextView.BottomSheetItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_bottom_sheet_item_height"
+            android:background="@drawable/zm_bottom_sheet_selector_round"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_share_whiteboard" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

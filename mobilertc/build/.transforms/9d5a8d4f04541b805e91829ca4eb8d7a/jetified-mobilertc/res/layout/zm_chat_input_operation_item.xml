@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/zm_white">
+
+    <ImageView
+        android:id="@+id/imageOpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:duplicateParentState="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/zm_mm_opt_panel_videocall_icon"
+        app:layout_constraintBottom_toTopOf="@+id/txtOptDesc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <TextView
+        android:id="@id/txtOptDesc"
+        style="@style/UIKitTextView.SecondaryText.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:duplicateParentState="true"
+        android:gravity="center"
+        android:importantForAccessibility="no"
+        android:text="@string/zm_mm_opt_video_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageOpt"/>
+
+    <ImageView
+        android:id="@+id/imageOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/zm_mm_opt_video_call"
+        android:src="@drawable/zm_mm_opt_btn_overlay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

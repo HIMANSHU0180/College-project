@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/zmFloatBtnPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/zm_margin_medium">
+
+    <include layout="@layout/zm_panel_record_live_audiomark_bandwith" />
+
+    <include layout="@layout/zm_confview_interpretation_language" />
+
+    <com.zipow.videobox.confapp.meeting.confhelper.ZmPollButton
+        android:id="@+id/btnPoll"
+        style="@style/ZmFlexBoxItemBg"
+        android:text="@string/zm_polling_btn_view_poll_progress_159402"
+        android:textColor="@color/zm_v2_txt_success"
+        android:textSize="@dimen/zm_toolbar_text_size"
+        android:textStyle="bold" />
+</com.google.android.flexbox.FlexboxLayout>

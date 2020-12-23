@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M4.185,20.999C3.8535,20.999 3.5625,20.7815 3.468,20.4665C3.156,19.4405 3,18.3575 3,17.249C3,11.297 7.6455,6.41 13.5,6.0245V3.749C13.5,3.446 13.683,3.1715 13.9635,3.056C14.2425,2.942 14.5665,3.005 14.781,3.218L20.781,9.218C21.0735,9.512 21.0735,9.986 20.781,10.2785L14.781,16.2785C14.565,16.493 14.241,16.556 13.9635,16.442C13.683,16.3265 13.5,16.052 13.5,15.749V13.5275C9.4725,13.829 6.072,16.538 4.905,20.4635C4.809,20.78 4.5165,20.999 4.185,20.999Z"
+      android:fillColor="@color/zm_btn_light_pressed"
+      android:fillType="evenOdd"/>
+</vector>

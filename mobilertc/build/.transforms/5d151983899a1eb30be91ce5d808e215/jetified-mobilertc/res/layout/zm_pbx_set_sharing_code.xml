@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="20dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:minWidth="500dp"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/UIKitTextView.LargeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:text="@string/zm_pbx_title_sharing_key_148025" />
+
+    <TextView
+        style="@style/ZMTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="@string/zm_pbx_lbl_sharing_key_148025" />
+    
+    <EditText
+        android:id="@+id/edtShareCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/zm_pbx_hint_sharing_key_148025"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        android:inputType="textCapCharacters|textVisiblePassword"
+        android:focusable="true"
+        android:textColorHint="@color/zm_im_search_text_hint"
+        android:imeOptions="actionDone|flagNoExtractUi"
+        android:maxLength="50"
+        android:text="" />
+
+</LinearLayout>

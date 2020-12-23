@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zipow.videobox.view.sip.SipCallMonitorStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:background="@drawable/zm_black_round_bkg_r15"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:gravity="center_vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sipCallMonitorStatusView">
+
+<!--    <ImageView-->
+<!--        android:layout_width="16dp"-->
+<!--        android:layout_height="16dp"-->
+<!--        android:src="@drawable/zm_sip_ic_listen"-->
+<!--        android:id="@+id/iv_monitor_status"-->
+<!--        />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        tools:text="Whisper"
+        style="@style/ZMTextView.Label"
+        android:textColor="@color/zm_v1_white"
+        android:drawableLeft="@drawable/zm_sip_ic_listen_no_dark"
+        android:drawablePadding="4dp"
+        android:id="@+id/tvMonitorStatus"
+        android:importantForAccessibility="no"
+        />
+
+
+</com.zipow.videobox.view.sip.SipCallMonitorStatusView>

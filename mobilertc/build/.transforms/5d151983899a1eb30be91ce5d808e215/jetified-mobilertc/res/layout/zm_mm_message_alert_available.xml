@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelDeleteAll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_white"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:visibility="visible">
+
+    <com.zipow.videobox.view.AvatarView
+        android:id="@+id/avatarView"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/UIKitTextView.BuddyName.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatarView"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/avatarView"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2sp"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/tvTime"
+        android:text="max_steitle" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        style="@style/UIKitTextView.SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvName"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/avatarView"
+        android:lineSpacingExtra="2sp" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/UIKitTextView.SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="12:12" />
+</RelativeLayout>

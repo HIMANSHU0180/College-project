@@ -1,0 +1,5 @@
+<vector android:autoMirrored="true" android:height="24dp"
+    android:viewportHeight="24" android:viewportWidth="24"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/zm_v2_tab_path_selected" android:pathData="M7.5,22H4.5C3.1193,22 2,20.8807 2,19.5V11.7814C2,10.6475 2.4813,9.5668 3.3241,8.8083L9.3241,3.4083C10.8454,2.0392 13.1546,2.0392 14.6759,3.4083L20.6759,8.8083C21.5187,9.5668 22,10.6475 22,11.7814V19.5C22,20.8807 20.8807,22 19.5,22H16.5C15.1193,22 14,20.8807 14,19.5V15.2632C14,14.7109 13.5523,14.2632 13,14.2632H11C10.4477,14.2632 10,14.7109 10,15.2632V19.5C10,20.8807 8.8807,22 7.5,22Z"/>
+</vector>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ZMTitleBar"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_rightButton="@+id/btnOK"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/ZMBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_back" />
+        
+        <Button
+            android:id="@+id/btnOK"
+            style="@style/ZMButton.TitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_btn_ok" />
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/zm_mm_title_select_contacts" />
+        
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    <RelativeLayout
+        android:id="@+id/panelInviteMaxAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zm_notification_background"
+        android:visibility="gone"
+        android:focusable="true"
+        >
+        <TextView
+            android:id="@+id/txtInviteMaxAlert"
+            style="@style/ZMTextView.Small.OnLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical"
+            />
+    </RelativeLayout>
+
+
+    <us.zoom.androidlib.widget.ZMEditText
+        android:id="@+id/edtSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@color/zm_white"
+        android:textSize="12sp"
+        android:lineSpacingExtra="2dp"
+        android:lineSpacingMultiplier="1.3"
+        android:maxLines="4"
+        android:imeOptions="actionDone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/zm_v2_cell_divider" />
+
+    <TextView
+        android:id="@+id/select_contact_hint_tv"
+        style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+        android:text="@string/zm_lbl_edit_group_history_message_hint_160938"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:background="@color/zm_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.zipow.videobox.view.mm.MMSelectContactsListView
+        android:id="@+id/buddyListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </com.zipow.videobox.view.mm.MMSelectContactsListView>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/zm_divider_line_decoration"
+        android:visibility="visible" />
+    <RelativeLayout
+        android:id="@+id/btnDeselectAll"
+        android:background="@drawable/ic_dark_background"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="46dp"
+            android:textSize="@dimen/zm_ui_kit_text_size_17sp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/zm_v1_blue_C900"
+            android:layout_width="wrap_content"
+            android:text="@string/zm_sip_unselect_all_169819"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

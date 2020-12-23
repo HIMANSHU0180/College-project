@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zipow.videobox.fragment.AddContactFragment">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_titlebar_height"
+        >
+        <TextView
+            android:id="@+id/btnBack"
+            style="@style/ZMTextView.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:text="@string/zm_btn_cancel"
+            android:textColor="@color/zm_v2_txt_action"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_lbl_add_contact"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            style="@style/UIKitTextView.LargeTitle"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="13dp">
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/zm_add_contact_avatarView"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/zm_add_contact_name"
+            android:layout_marginLeft="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aidy"
+            style="@style/UIKitTextView.CellTitle">
+
+        </TextView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/zm_v2_cell_divider"/>
+
+    <TextView
+        android:id="@+id/zm_add_contact_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        style="@style/UIKitTextView.Small.Gray"/>
+
+    <Button
+        android:id="@+id/zm_add_contact_btn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="40dp"
+        style="@style/UIKitItinactivatedBtn.Large"
+        android:text="@string/zm_btn_add_33300"/>
+</LinearLayout>

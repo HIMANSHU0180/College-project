@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/zm_sip_pop_width_large"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/zm_sip_pop_content_bg"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/UIKitTextView.PrimaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="16dp"
+            android:drawableStart="@drawable/zm_sip_ic_out_of_range"
+            android:drawablePadding="10dp"
+            android:text="@string/zm_sip_out_of_range_127988" />
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/UIKitTextView.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/zm_sip_out_of_range_tip_127988" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M8,5.5C8,4.6716 7.3284,4 6.5,4C5.6716,4 5,4.6716 5,5.5V18.5C5,19.3284 5.6716,20 6.5,20C7.3284,20 8,19.3284 8,18.5V5.5ZM19,5.5C19,4.6716 18.3284,4 17.5,4C16.6716,4 16,4.6716 16,5.5V18.5C16,19.3284 16.6716,20 17.5,20C18.3284,20 19,19.3284 19,18.5V5.5Z"
+      android:fillColor="@color/zm_v2_waiting_room_button_content"
+      android:fillType="evenOdd"/>
+</vector>

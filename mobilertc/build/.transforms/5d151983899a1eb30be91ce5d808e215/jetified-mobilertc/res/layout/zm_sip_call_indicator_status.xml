@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_btn_round_gray_bkg"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+
+    <ImageView
+        android:layout_width="@dimen/zm_ic_sip_indicator_size"
+        android:layout_height="@dimen/zm_ic_sip_indicator_size"
+        android:src="@drawable/zm_ic_sip_call_indicator_p2p"
+        android:id="@+id/ivSipCallP2p"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="centerInside"/>
+
+    <ImageView
+        android:layout_width="@dimen/zm_ic_sip_indicator_size"
+        android:layout_height="@dimen/zm_ic_sip_indicator_size"
+        android:src="@drawable/ic_encryption_gcm"
+        android:id="@+id/ivSipCallEncrypt"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/zm_lbl_encryption_gcm_155209"/>
+
+    <ImageView
+        android:layout_width="@dimen/zm_ic_sip_indicator_size"
+        android:layout_height="@dimen/zm_ic_sip_indicator_size"
+        android:src="@drawable/zm_ic_sip_call_indicator_hd"
+        android:id="@+id/ivSipCallHd"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/zm_sip_call_indicator_hd_127988"/>
+
+    <ImageView
+        android:layout_width="@dimen/zm_ic_sip_indicator_size"
+        android:layout_height="@dimen/zm_ic_sip_indicator_size"
+        android:src="@drawable/zm_ic_sip_call_indicator_quality_ave"
+        android:id="@+id/ivSipCallQuality"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="centerInside"/>
+</LinearLayout>

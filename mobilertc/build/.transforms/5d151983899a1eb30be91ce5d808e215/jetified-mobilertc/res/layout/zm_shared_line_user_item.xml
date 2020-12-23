@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_line_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="13dp"
+        android:id="@+id/bottomGlide"
+        />
+
+    <TextView
+        android:id="@+id/tv_group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_white"
+        android:paddingStart="32dp"
+        android:paddingLeft="32dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="5dp"
+        android:text="@string/zm_sip_sla_shared_82852"
+        android:textColor="@color/zm_v2_txt_secondary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        style="@style/UIKitTextView.LargeTitle"
+        app:layout_constraintEnd_toStartOf="@id/iv_fast_dial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_name"
+        tools:text="Eric Yuan (you)" />
+
+    <com.zipow.videobox.view.PresenceStateView
+        android:id="@+id/presenceStateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/tv_user_name"
+        app:layout_constraintEnd_toStartOf="@id/tv_user_name"
+        app:layout_constraintTop_toTopOf="@id/tv_user_name" />
+
+    <TextView
+        android:id="@+id/tv_user_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        style="@style/UIKitTextView.SecondaryText.Small"
+        app:layout_constraintEnd_toStartOf="@id/iv_fast_dial"
+        app:layout_constraintStart_toStartOf="@id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        tools:text="Available"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottomGlide"/>
+
+    <ImageView
+        android:id="@+id/iv_fast_dial"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:contentDescription="@string/zm_accessibility_sip_call_dial"
+        android:padding="5dp"
+        android:src="@drawable/zm_sip_call_back"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_group_name"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintStart_toStartOf="@id/tv_user_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

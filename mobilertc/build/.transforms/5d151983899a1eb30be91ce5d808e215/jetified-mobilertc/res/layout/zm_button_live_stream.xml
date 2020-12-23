@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_bg_record_pressed"
+    android:gravity="center"
+    android:minHeight="@dimen/zm_btn_height_24dp">
+
+    <TextView
+        style="@style/ZMTextView.Small.OnGray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/zm_bg_lightdark_stroke_normal"
+        android:gravity="center"
+        android:paddingLeft="@dimen/zm_padding_smallest"
+        android:paddingRight="@dimen/zm_padding_smallest"
+        android:layout_marginLeft="@dimen/zm_padding_smallest"
+        android:layout_marginRight="@dimen/zm_padding_smallest"
+        android:text="@string/zm_live_btn_159402"
+        android:textStyle="bold" />
+</LinearLayout>
+

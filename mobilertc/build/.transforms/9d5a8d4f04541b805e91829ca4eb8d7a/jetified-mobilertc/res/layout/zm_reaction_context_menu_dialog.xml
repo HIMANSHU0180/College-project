@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/emoji_panel_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <us.zoom.androidlib.widget.recyclerview.ZMRecyclerView
+            android:id="@+id/menu_list"
+            android:background="@color/zm_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            zoom:maxHeightRatio="0.667"
+            />
+
+        <ViewStub
+            android:id="@+id/emoji_panel_view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout="@layout/zm_reaction_emoji_panel_view"
+            />
+    </RelativeLayout>
+    <com.zipow.videobox.view.mm.ReactionEmojiSampleView
+        android:id="@+id/reaction_emoji_sample_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_above="@id/emoji_panel_layout"
+        />
+    <com.zipow.videobox.view.mm.ReactionEmojiContextMenuHeaderView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        />
+</RelativeLayout>

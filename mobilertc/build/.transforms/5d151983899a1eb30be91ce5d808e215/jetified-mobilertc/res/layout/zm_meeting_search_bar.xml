@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panelSearchBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+    android:orientation="horizontal"
+    android:visibility="invisible">
+
+    <ImageView
+        android:id="@+id/btnCancel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="18dp"
+        android:background="@drawable/zm_btn_back_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/zm_im_search_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/zm_ic_im_search" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            style="@style/ZMEditText.GlobalSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="@string/zm_hint_search"
+            android:imeOptions="actionDone" />
+
+        <ImageView
+            android:id="@+id/btnClearSearchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/zm_btn_clear_search_view"
+            android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

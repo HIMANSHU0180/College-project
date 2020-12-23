@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back_on_ligh"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:contentDescription="@string/zm_btn_back" />
+        <Button
+            android:id="@+id/btnMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_more_on_light"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:contentDescription="@string/zm_btn_back" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgFile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="125dp"
+        android:src="@drawable/zm_ic_filetype_zip" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:gravity="center"
+        style="@style/ZMTextView.Large.NotBold"
+        tools:text="DesignGuidelines.zip" />
+
+    <TextView
+        android:id="@+id/txtTranslateSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/ZMTextView.Small.Dimmed"
+        tools:text="91 KB/782 KB (26.9 KB/s)" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/PollingPercentBar"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp" />
+    <!--style="?android:progressBarStyleHorizontal"-->
+    <Button
+        android:id="@+id/btnMain"
+        style="@style/UIKitItinactivatedBtn.Large"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="80dp"
+        android:text="@string/zm_btn_download"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="@string/zm_btn_cancel"
+        style="@style/ZMButton.NoBackground" />
+</LinearLayout>

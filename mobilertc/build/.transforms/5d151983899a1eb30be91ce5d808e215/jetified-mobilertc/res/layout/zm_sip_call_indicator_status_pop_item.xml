@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:layout_width="@dimen/zm_ic_sip_indicator_size"
+        android:layout_height="@dimen/zm_ic_sip_indicator_size"
+        android:id="@+id/icon"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/txtLabel"
+        style="@style/UIKitTextView.PrimaryText.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"/>
+</LinearLayout>

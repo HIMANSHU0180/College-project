@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:background="@color/zm_white"
+    >
+    <TextView
+        android:id="@+id/zm_notification_contact_list_item_name"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"/>
+    <ImageView
+        android:id="@+id/zm_notification_contact_list_item_delete_btn"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:padding="5dp"
+        android:src="@drawable/zm_mm_less_btn"
+        android:layout_marginRight="20dp"
+        />
+</LinearLayout>

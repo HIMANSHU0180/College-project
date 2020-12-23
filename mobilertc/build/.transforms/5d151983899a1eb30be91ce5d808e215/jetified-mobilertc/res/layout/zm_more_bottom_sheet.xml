@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.zipow.videobox.AddrBookItemDetailsActivity">
+
+
+    <FrameLayout
+        android:id="@+id/panelMeetingReaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/zm_bottom_sheet_gap_width"
+        android:background="@drawable/zm_bottom_sheet_round_rect_bg"
+        android:orientation="vertical">
+
+        <com.zipow.videobox.view.MeetingReactionView
+            android:id="@+id/viewMeetingReaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_bottom_sheet_round_rect_bg"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/panelRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnStartRecord"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_record_btn_start_record"
+                    android:textColor="@color/zm_highlight" />
+
+                <include
+                    layout="@layout/zm_more_item_record_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelEndAllBO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnEndAllBO"
+                    style="@style/ZMTextView.SettingsItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_bo_btn_end_all_bo"
+                    android:textColor="@color/zm_v2_txt_desctructive" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelDisconnectAudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnDisconnectAudio"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_mi_disconnect_audio"
+                    android:textColor="@color/zm_v2_txt_desctructive" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/panelUnreadMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/unreadMessage"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_btn_chat_109011" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/languageInterpretation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:gravity="center"
+                    android:minWidth="240dp"
+                    android:text="@string/zm_lbl_language_interpretation_88102" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelOriginalSound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtOriginalSound"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:gravity="center"
+                    android:focusable="true"
+                    android:text="@string/zm_lbl_enable_original_sound_145354" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelNonHostAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnLoginAsHost"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_btn_login_as_host" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/panelClaimHostByHostkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnClaimHostByHostkey"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_btn_claim_as_host" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelClaimHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/btnClaimHost"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_btn_reclaim_host" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelEnableLiveTranscript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:gravity="center"
+                    android:minWidth="240dp"
+                    android:text="@string/zm_btn_enable_live_transcript_82883" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelDisableLiveTranscript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:gravity="center"
+                    android:minWidth="240dp"
+                    android:text="@string/zm_btn_disable_live_transcript_82883" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelViewFullTranscript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:gravity="center"
+                    android:minWidth="240dp"
+                    android:text="@string/zm_btn_view_full_transcript_82883" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelHandAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtHandAction"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_btn_raise_hand" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/panelMeetingSettings"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMeetingSettings"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_title_setting_meeting" />
+
+            </FrameLayout>
+
+            <!--added by sdk-->
+            <FrameLayout
+                android:id="@+id/panelMiniMeeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/btnMiniMeeting"
+                    style="@style/ZMTextView.BottomSheetItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zm_bottom_sheet_item_height"
+                    android:background="@drawable/zm_bottom_sheet_selector_round"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_sdk_lbl_min_meeting_cs_2094" />
+
+            </FrameLayout>
+            <!--added by sdk-->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

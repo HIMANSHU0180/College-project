@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/zm_white"
+    android:minHeight="50dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="10dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="10dp">
+    <ImageView
+        android:id="@+id/avatarView"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/zm_ic_avatar_group"
+        android:layout_marginTop="0dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <com.zipow.videobox.view.PListNameRoleLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp">
+            <TextView
+                android:id="@+id/txtGroupName"
+                style="@style/UIKitTextView.CellTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="4dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:id="@+id/txtJoined"
+                style="@style/UIKitTextView.CellTitle"
+                android:textColor="@color/zm_v2_txt_secondary"
+                android:textSize="@dimen/zm_ui_kit_text_size_15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/zm_description_mm_joined_69826" />
+        </com.zipow.videobox.view.PListNameRoleLayout>
+
+
+        <TextView
+            android:id="@+id/txtCreator"
+            style="@style/UIKitTextView.SecondaryText.Medium.Dimmed"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

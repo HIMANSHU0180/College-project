@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp"/>
+            <solid android:color="@color/zm_v2_text_btn_blue_normal"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="15dp"/>
+            <solid android:color="@color/zm_v2_btn_gray_bkg"/>
+        </shape>
+    </item>
+</selector>

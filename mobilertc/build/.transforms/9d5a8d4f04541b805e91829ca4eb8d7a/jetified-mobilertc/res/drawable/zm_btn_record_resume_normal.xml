@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+  <path
+      android:pathData="M4,35.4732V4.5268C4,3.3882 5.2187,2.6648 6.2183,3.21L34.5858,18.6832C35.6281,19.2517 35.6281,20.7483 34.5858,21.3168L6.2183,36.79C5.2187,37.3352 4,36.6118 4,35.4732Z"
+      android:fillColor="@color/zm_v2_waiting_room_button_content"/>
+</vector>

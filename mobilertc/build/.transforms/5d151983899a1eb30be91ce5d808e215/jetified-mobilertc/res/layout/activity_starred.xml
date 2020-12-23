@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zm_white"
+    tools:context="com.zipow.videobox.StarredActivity">
+
+    <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height"
+        zoom:zm_leftButton="@+id/zm_starred_title_back_btn"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <ImageView
+            android:id="@+id/zm_starred_title_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            style="@style/ZMBackButton"
+            android:contentDescription="@string/zm_btn_back"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:id="@+id/viewRight"
+            android:gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZMTextView.Title"
+            android:textStyle="normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/zm_mm_starred_title_name_owp40" />
+    </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/zm_starred_radio_group"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/zm_starred_radio_btn1"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="0px"
+            android:background="@drawable/zm_starred_radio_btn"
+            android:textColor="@color/zm_starred_radio_btn_text_color"
+            android:text="@string/zm_mm_starred_radio_contact_owp40"
+            android:textStyle="bold"
+            android:checked="true"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/zm_starred_radio_btn2"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/zm_mm_starred_radio_message_owp40"
+            android:textStyle="bold"
+            android:background="@drawable/zm_starred_radio_btn"
+            android:textColor="@color/zm_starred_radio_btn_text_color"
+            android:layout_height="match_parent"
+            android:button="@null"/>
+    </RadioGroup>
+    <androidx.viewpager.widget.ViewPager
+        android:visibility="gone"
+        android:id="@+id/zm_starred_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/zm_starred_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+</LinearLayout>

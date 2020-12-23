@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zipow.videobox.view.sip.SipConnectAlertView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/zm_notification_background"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/txtMsg"
+        style="@style/ZMTextView.Medium.OnLight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/zm_sip_connect_text_148924"
+        android:textSize="13sp"
+        android:textColor="@color/zm_ui_kit_color_black_232333"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnTry"
+            style="@style/ZMButton.NoBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_sip_connect_try_now_148924"
+            android:textColor="@color/zm_ui_kit_color_blue_0862D1"
+            android:padding="16dp"
+            android:textSize="13dp"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/progress"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="24dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:indeterminateDrawable="@drawable/zm_sip_transcript_loading"/>
+    </FrameLayout>
+</com.zipow.videobox.view.sip.SipConnectAlertView>

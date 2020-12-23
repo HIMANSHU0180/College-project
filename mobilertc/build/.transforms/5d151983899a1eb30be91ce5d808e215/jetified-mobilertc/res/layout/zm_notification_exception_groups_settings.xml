@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height" >
+
+        <com.zipow.videobox.view.ZMSearchBar
+            android:id="@+id/panelSearchBarReal"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            zoom:editTextHint="@string/zm_hint_search"
+            zoom:imeOptions="actionDone"
+            zoom:noMargin="true"
+            />
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            zoom:zm_leftButton="@+id/btnBack"
+            zoom:zm_rightButton="@+id/btnRight"
+            zoom:zm_title="@+id/txtTitle">
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/ZMBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_cancel" />
+
+            <Button
+                android:id="@+id/btnRight"
+                style="@style/ZMButton.TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_ok" />
+
+            <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                android:id="@+id/txtTitle"
+                style="@style/ZMTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/zm_title_notification_exception_group_settings_59554" />
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/panelSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_white"
+        >
+
+        <com.zipow.videobox.view.ZMSearchBar
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            zoom:editTextHint="@string/zm_hint_search"
+            zoom:imeOptions="actionDone"
+            zoom:cursorVisible="false"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@id/edtSearch"
+            android:background="@color/zm_im_search_shadow"
+            />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/panelListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/zm_listview_bg">
+
+        <com.zipow.videobox.view.mm.MMNotificationExceptionGroupSettingsListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/zm_transparent"
+            android:divider="@color/zm_transparent"
+            android:dividerHeight="0dp"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"/>
+    </FrameLayout>
+
+
+</LinearLayout>

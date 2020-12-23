@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/zm_sip_pop_width_large"
+    android:minWidth="@dimen/zm_sip_pop_width_small"
+    android:background="@drawable/zm_sip_pop_content_bg"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <us.zoom.androidlib.widget.ZMMenuListView
+        android:id="@+id/menuListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/zm_transparent"
+        android:cacheColorHint="@color/zm_transparent"
+        android:divider="@color/zm_transparent"
+        android:listSelector="@color/zm_transparent"
+        app:zm_auto_compute_width="true" />
+</androidx.cardview.widget.CardView>
+

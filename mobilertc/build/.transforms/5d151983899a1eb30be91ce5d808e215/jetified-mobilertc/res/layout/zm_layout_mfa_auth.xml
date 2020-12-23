@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:zoom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+    android:background="@drawable/zm_window_bg"
+        android:orientation="vertical">
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar.Light"
+            zoom:zm_leftButton="@+id/btnLeft"
+            zoom:zm_rightButton="@+id/viewRight"
+            zoom:zm_title="@+id/txtTitle"
+            android:background="@drawable/zm_window_bg">
+
+            <View
+                android:id="@+id/viewRight"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/zm_btn_medium_height" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLeft"
+                android:layout_marginTop="@dimen/zm_padding_medium_size"
+                android:layout_gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_btn_cancel"
+                    android:visibility="visible"
+                    android:gravity="left|bottom"
+                    style="@style/UIKitButton.Medium.OnLight.NoBackground"
+                    android:contentDescription="@string/zm_btn_cancel" />
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:gravity="left|bottom"
+                    style="@style/ZMBackButton.OnLight"
+                    android:contentDescription="@string/zm_btn_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/zm_padding_smallest_size"
+                android:paddingRight="@dimen/zm_padding_smallest_size"
+                android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                android:layout_marginTop="@dimen/zm_padding_medium_size"
+                android:textStyle="bold"
+                android:textSize="@dimen/zm_font_large_size"
+                android:textColor="@color/zm_v2_txt_title_header"
+                android:layout_gravity="center_vertical|bottom"
+                android:text="@string/zm_text_mfa_two_factor_auth_176897" />
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+
+        <ScrollView
+            android:id="@+id/appAuthView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:fillViewport="true">
+
+                <!-- Auth App & SMS confirm view -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/scrollLayout"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/enterCodeByApp"
+                            style="@style/ZMTextView.Normal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center"
+                            android:text="@string/zm_text_mfa_enter_auth_app_code_176897" />
+
+                        <com.zipow.videobox.login.view.ZmVerifySmsCodeView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/verifyCode"
+                            android:layout_marginTop="@dimen/zm_margin_normal_size"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/invalidwarn"
+                            android:layout_marginTop="@dimen/zm_margin_normal_size"
+                            style="@style/ZmButton.Small.Text.noBackground"
+                            android:textColor="@color/zm_txt_warn"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:text="@string/zm_text_mfa_invalid_verify_code_176897" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/zm_radius_small">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/otherOptionsInVerify"
+                            style="@style/UIKitButton.Small.OnLight.NoBackground"
+                            android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                            android:layout_marginRight="@dimen/zm_margin_medium_size"
+                            android:layout_marginBottom="@dimen/zm_margin_large"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:visibility="visible"
+                            android:text="@string/zm_text_mfa_other_options_176897" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/resend"
+                            style="@style/UIKitButton.Small.OnLight.NoBackground"
+                            android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                            android:layout_marginRight="@dimen/zm_margin_medium_size"
+                            android:layout_marginBottom="@dimen/zm_margin_large"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                </LinearLayout >
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/recoveryView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:fillViewport="true">
+
+            <!-- recovery view -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/enterCodeRecovery"
+                        style="@style/ZMTextView.Normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_edit_text_normal_height"
+                        android:layout_marginTop="@dimen/zm_edit_text_normal_height"
+                        android:layout_marginBottom="@dimen/zm_font_largest_size"
+                        android:gravity="center"
+                        android:text="@string/zm_text_mfa_enter_one_recovery_code_176897"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_dimen_stroke_smallest"
+                        android:background="@color/zm_v2_bg_pressed"/>
+
+                    <EditText
+                        android:id="@+id/enterCode"
+                        style="@style/ZMEditText.SettingsItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_edit_text_normal_height"
+                        android:background="@color/zm_white"
+                        android:gravity="center"
+                        android:hint="@string/zm_text_mfa_enter_code_176897"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="128" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_dimen_stroke_smallest"
+                        android:background="@color/zm_v2_bg_pressed"/>
+                    <Button
+                        android:id="@+id/btnMFAVerify"
+                        style="@style/UIKitItinactivatedBtn.Large"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="@dimen/zm_margin_small_size"
+                        android:layout_marginTop="@dimen/zm_margin_small_size"
+                        android:layout_marginRight="@dimen/zm_margin_small_size"
+                        android:text="@string/zm_btn_mfa_verify_176897" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_radius_small">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recoveryOtherOptions"
+                        style="@style/UIKitButton.Small.OnLight.NoBackground"
+                        android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                        android:layout_marginRight="@dimen/zm_margin_medium_size"
+                        android:layout_marginBottom="@dimen/zm_margin_large"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:visibility="visible"
+                        android:text="@string/zm_text_mfa_other_options_176897" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/smsView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/sendTip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="160dp"
+                        android:gravity="center"
+                        android:text="@string/zm_text_mfa_sms_send_to_176897"/>
+
+                    <TextView
+                        android:id="@+id/phoneNumber"
+                        style="@style/ZmTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/zm_margin_medium_size"
+                        android:text="+1 123****789"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/zm_margin_small_size"
+                    android:layout_marginRight="@dimen/zm_margin_small_size"
+                    android:layout_marginTop="@dimen/zm_radius_small">
+
+                    <Button
+                        android:id="@+id/sendViaSMS"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_btn_large_height"
+                        style="@style/UIKitItinactivatedBtn.Large"
+                        android:layout_marginBottom="@dimen/zm_margin_small_size"
+                        android:text="@string/zm_btn_mfa_send_via_sms_176897" />
+
+                    <Button
+                        android:id="@+id/sendViaPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_btn_large_height"
+                        style="@style/UIKitItinactivatedBtn.Large.Secondary"
+                        android:layout_marginBottom="@dimen/zm_margin_small_size"
+                        android:text="@string/zm_btn_mfa_send_via_phone_176897" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/otherOptionsForSms"
+                        style="@style/UIKitButton.Small.OnLight.NoBackground"
+                        android:layout_marginBottom="@dimen/zm_margin_largest_size"
+                        android:clickable="true"
+                        android:text="@string/zm_text_mfa_other_options_176897" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+</LinearLayout>

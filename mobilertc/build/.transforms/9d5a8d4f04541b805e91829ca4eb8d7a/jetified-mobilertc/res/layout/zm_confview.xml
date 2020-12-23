@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 
+	    ** Important**
+		Some devices such as Samsung GT i9003 need to set a a surface holder to camera to
+		capture video. Here we create a very small SurfaceView outbounds of screen for it.
+	 -->
+    <SurfaceView
+        android:id="@+id/svPreview"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:focusable="false"
+        android:layout_marginTop="-2dp" />
+    
+    <com.zipow.videobox.view.video.VideoView
+        android:id="@+id/videoView"
+        android:focusable="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+	<com.zipow.videobox.view.CompanionModeView
+		android:id="@+id/companionModeView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="gone" />
+        
+    <ImageView
+        android:id="@+id/fadeview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="gone" /> 
+
+     <ImageView
+        android:id="@+id/fadeview1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="gone" /> 
+ 
+    <LinearLayout
+        android:id="@+id/panelConnecting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/zm_top_toolbar_bg"
+        android:visibility="visible" >
+
+        <ProgressBar
+            style="@style/ZMProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/txtConnecting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_msg_connecting"
+            android:layout_gravity="center_vertical"
+            style="@style/ZMTextView.Medium.OnDark" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/panelWaitingShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/zm_loading_bg"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            style="@style/ZMProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp" />
+        
+        <TextView
+            android:id="@+id/txtMsgWaitingShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_msg_waiting_share"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            style="@style/ZMTextView.Medium.OnDark"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/panelSharingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:orientation="vertical"
+		android:paddingLeft="4dp"
+		android:paddingRight="4dp"
+        android:background="@color/zm_sharing_title_bg" >
+        
+        <TextView
+            android:id="@+id/txtSharingTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_msg_sharing"
+            style="@style/ZMTextView.Medium.OnDark"
+            android:ellipsize="end"
+            android:lines="1"
+            android:clickable="false"/>
+
+		<TextView
+			android:id="@+id/txtMyScreenName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/zm_msg_sharing"
+			style="@style/ZMTextView.Medium.OnDark"
+			android:ellipsize="end"
+			android:lines="1"
+			android:clickable="false"/>
+        
+    </LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/panelShareGalleryExpandPortView"
+		android:layout_width="match_parent"
+		android:layout_height="20dp"
+		android:layout_gravity="top"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:visibility="gone">
+		<ImageView
+			android:id="@+id/galleryViewExpandArrowImgPort"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/zm_arrow_down_normal"/>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/panelShareGalleryExpandLandView"
+		android:layout_width="20dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="left"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:visibility="gone">
+
+		<ImageView
+			android:id="@+id/galleryViewExpandArrowImgLand"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/zm_arrow_right_normal"/>
+	</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelSwitchScene"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="340dp"
+        android:orientation="horizontal">
+        
+        <!-- Container for code generated switch scene dot buttons -->
+        <LinearLayout
+            android:id="@+id/panelSwitchSceneButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zm_dot_panel_background"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.zipow.videobox.view.ConfToolsPanel
+        android:id="@+id/panelTools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+		<FrameLayout
+			android:id="@+id/panelTopContent"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<FrameLayout
+				android:id="@+id/panelAudioShare"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/zm_gray_7"
+				android:visibility="gone"
+				android:alpha="0.6"
+				android:gravity="center">
+
+				<TextView
+					android:id="@+id/txtAudioShareInfo"
+					style="@style/ZMTextView.Normal.OnDark"
+					android:gravity="center"
+					android:layout_gravity="center_horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingTop="8dp"
+					android:paddingBottom="8dp"
+					android:text="Someone is Sharing Audio"/>
+			</FrameLayout>
+
+			<android.widget.Space
+				android:layout_width="match_parent"
+				android:layout_height="@dimen/zm_padding_largest"
+				android:id="@+id/notifySpace"/>
+
+			<LinearLayout
+				android:id="@+id/panelTop"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical" >
+
+				<LinearLayout
+					android:id="@+id/titleBar"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:background="@drawable/zm_top_toolbar_bg"
+					android:orientation="vertical"
+					android:paddingTop="@dimen/zm_padding_largest"
+					android:paddingBottom="2dp"
+					android:gravity="center" >
+
+					<include
+						layout="@layout/zm_conf_title_bar"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"/>
+
+					<TextView
+						android:id="@+id/txtTimer"
+						style="@style/ZMTextView.Normal.OnDark"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="00:00" />
+
+					<TextView
+						android:id="@+id/txtCountdown"
+						style="@style/ZMTextView.Normal.OnDark"
+						android:layout_width="wrap_content"
+						android:visibility="gone"
+						android:layout_height="wrap_content"
+						android:text="remaining: 00:00" />
+				</LinearLayout>
+
+			</LinearLayout>
+		</FrameLayout>
+
+		<LinearLayout
+			android:id="@+id/panelPrompt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/panelTopContent"
+			android:layout_marginTop="@dimen/zm_margin_small">
+
+			<include layout="@layout/zm_panel_float_btn" />
+		</LinearLayout>
+
+		<LinearLayout
+            android:id="@+id/btnSwitchToShare"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_below="@+id/panelPrompt"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/zm_btn_round_dark" >
+
+            <TextView
+                style="@style/ZMTextView.Small.OnDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_switch_to_share" />
+        </LinearLayout>        
+    
+        <us.zoom.androidlib.widget.ZMVerticalFlowLayout
+            android:id="@+id/panelTop2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/panelPrompt"
+	        android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/zm_margin_small"
+            android:layout_alignWithParentIfMissing="true"
+	        android:orientation="vertical"
+	        android:gravity="center" >
+
+            <LinearLayout
+                android:id="@+id/btnKubi"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+	            android:focusable="true"
+                android:clickable="true"
+	            android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgKubi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_ic_kubi_connected" />
+                
+                <TextView
+                    android:id="@+id/txtKubiStatus"
+                    style="@style/ZMTextView.ExSmall.OnDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:text="@string/zm_kubi_status_connected" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnBreakout"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+	            android:focusable="true"
+                android:clickable="true"
+	            android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_btn_bo_icon" />
+                
+                <TextView
+                    style="@style/ZMTextView.ExSmall.OnDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:text="@string/zm_bo_btn_breakout"/>
+
+            </LinearLayout> 
+                        
+            <LinearLayout
+                android:id="@+id/btnBOHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+	            android:focusable="true"
+                android:clickable="true"
+	            android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/zm_btn_bo_help" />
+                
+                <TextView
+                    style="@style/ZMTextView.ExSmall.OnDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:duplicateParentState="true"
+                    android:text="@string/zm_bo_btn_ask_for_help"/>
+
+            </LinearLayout>
+
+	    </us.zoom.androidlib.widget.ZMVerticalFlowLayout>
+
+		<include layout="@layout/zm_confview_interpretation_switch" />
+	    
+	    <us.zoom.androidlib.widget.CaptionView
+            android:id="@+id/txtClosedCaption"
+            style="@style/ZMTextView.Normal.OnDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/panelBottom"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"/>
+
+        <RelativeLayout
+	        android:id="@+id/panelBottom"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+		    android:layout_alignWithParentIfMissing="true">
+		
+		    <com.zipow.videobox.view.ConfToolbar
+		        android:id="@+id/confToolbar"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"/>
+
+			<Button
+				android:id="@+id/btn_back_to_call"
+				android:layout_width="1px"
+				android:layout_height="1px"
+				android:layout_alignParentEnd="true"
+				android:background="@null"
+				android:visibility="gone"
+				android:contentDescription="@string/zm_btn_back_to_call_61381" />
+		
+		</RelativeLayout>
+		<com.zipow.videobox.share.ShareView
+		    android:id="@+id/sharingView"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:visibility="gone" 
+		    android:layout_above="@id/panelBottom"
+		    android:layout_below="@id/panelTopContent"/>
+		
+    </com.zipow.videobox.view.ConfToolsPanel>
+    
+	<com.zipow.videobox.confapp.meeting.confhelper.ZmStartRecordingPanel
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"/>
+    <LinearLayout
+        android:id="@+id/panelBOStatusChange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ViewStub
+            android:id="@+id/vBOStatusChange"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/zm_bo_status_change"
+            />
+    </LinearLayout>
+    
+    <com.zipow.videobox.view.ZMFeccView
+        android:id="@+id/panelFecc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="70dp" />
+    
+    <com.zipow.videobox.view.video.RCFloatView 
+        android:id="@+id/rc_float_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:visibility="gone">
+        
+    </com.zipow.videobox.view.video.RCFloatView>
+    
+    <com.zipow.videobox.view.video.RCMouseView
+        android:id="@+id/rc_mouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zm_rc_mouse_normal"
+        android:visibility="gone"/>
+
+	<com.zipow.videobox.view.panel.ZmLeaveCancelPanel
+		android:id="@+id/zmLeaveCancelPanel"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		/>
+</FrameLayout>
+

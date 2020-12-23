@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_pt_titlebar_height" >
+
+        <include layout="@layout/zm_meeting_search_bar"/>
+
+        <us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZMTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            zoom:zm_leftButton="@+id/btnBack"
+            zoom:zm_rightButton="@+id/panelForBtnChatWithAllOnTitleBar"
+            zoom:zm_title="@+id/txtTitle" >
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/ZMButton.TitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/zm_btn_close" />
+
+            <FrameLayout
+                android:id="@+id/panelForBtnChatWithAllOnTitleBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp" >
+            </FrameLayout>
+
+            <us.zoom.androidlib.widget.ZMDynTextSizeTextView
+                android:id="@+id/txtTitle"
+                style="@style/ZMTextView.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/zm_title_plist" />
+        </us.zoom.androidlib.widget.ZMIOSStyleTitlebarLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.zipow.videobox.view.PListView
+            android:id="@+id/plistView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/zm_v2_light_bg_normal"
+            android:scrollingCache="false" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zm_tab_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/panelFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <com.zipow.videobox.view.NonVerbalFeedbackActionView
+                android:id="@+id/viewFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelActions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="3dp" >
+
+            <Button
+                android:id="@+id/btnInvite"
+                style="@style/ZMPlistButton"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:maxWidth="100dp"
+                android:text="@string/zm_btn_invite" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnMuteAll"
+                style="@style/ZMPlistButton"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:maxWidth="120dp"
+                android:text="@string/zm_btn_mute_all" />
+
+
+            <ImageView
+                android:id="@+id/btnMore"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:background="@drawable/zm_btn_r6_rect_state_bg"
+                android:scaleType="center"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_more"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

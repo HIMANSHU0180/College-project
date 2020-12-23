@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+    <ViewStub
+        android:id="@+id/sipCallMonitorStatusStub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/zm_sip_call_monitor_status_view" />
+
+    <View
+        android:id="@+id/monitorStatusVDivider"
+        android:layout_width="1dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@color/zm_v1_purple_50_alpha18" />
+
+    <ViewStub
+        android:id="@+id/sipCallIndicatorStub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/zm_sip_call_indicator_status_stub" />
+</LinearLayout>

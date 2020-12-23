@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".alldetail">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/sea"
+        android:hint="search">
+
+    </EditText>
+
+    <ListView
+        android:id="@+id/listview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF9877"
+           android:padding="15dp"
+        android:layout_below="@+id/sea"
+
+        >
+
+    </ListView>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+     android:layout_centerVertical="true"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_height="100dp" />
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="zm_addon_title_github_bg">@color/zm_v1_gray_F900</color>
+    <color name="zm_addon_title_gitlab_bg">@color/zm_v1_gray_F900</color>
+    <color name="zm_addon_title_jira_bg">@color/zm_v1_gray_F900</color>
+    <color name="zm_addon_title_normal_bg">@color/zm_v1_gray_F900</color>
+    <color name="zm_chat_msg_bg_e2e_success_normal_19884">@color/zm_v1_blue_C600</color>
+    <color name="zm_chat_typing_bg">@color/zm_v1_gray_1400</color>
+    <color name="zm_chat_typing_text">@color/zm_v1_white_alpha54</color>
+    <color name="zm_im_search_shadow">@color/zm_v1_white_alpha9</color>
+    <color name="zm_pbx_sms_bg_sent">@color/zm_v1_green_700_alpha10</color>
+    <color name="zm_v2_arrow">@color/zm_v1_white_500</color>
+    <color name="zm_v2_arrow_right">@color/zm_v1_gray_D300</color>
+    <color name="zm_v2_btn_gray_bkg">@color/zm_v1_white_alpha18</color>
+    <color name="zm_v2_svg_avatar_1">@color/zm_v1_white</color>
+    <color name="zm_v2_svg_avatar_2">@color/zm_v1_gray_1400</color>
+    <color name="zm_v2_svg_avatar_3">@color/zm_v1_white_500</color>
+    <color name="zm_v2_svg_reaction">@color/zm_v1_white_alpha54</color>
+    <color name="zm_v2_svg_sip_avatar_bg1">@color/zm_v1_blue_B400_alpha3</color>
+    <color name="zm_v2_svg_sip_avatar_bg2">@color/zm_v1_blue_B400_alpha8</color>
+    <color name="zm_v2_tab_bg_normal">@color/zm_v1_gray_B600</color>
+    <color name="zm_v2_tab_bg_select">@color/zm_v1_white_500</color>
+    <color name="zm_v2_tab_path_normal">@color/zm_v1_white</color>
+    <color name="zm_v2_tab_path_selected">@color/zm_v1_white_500</color>
+    <color name="zm_v2_title_tab_textcolor_select">@color/zm_v1_white_500</color>
+    <color name="zm_v2_title_tab_textcolor_unselect">@color/zm_v1_white_alpha54</color>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar.Search.NoElevation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@id/panelSearchBar"
+            android:layout_alignBottom="@id/panelSearchBar"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            >
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/zm_ic_back_blue_normal"
+                android:duplicateParentState="true"
+                android:contentDescription="@string/zm_btn_back"
+                />
+        </RelativeLayout>
+        <com.zipow.videobox.view.ZMSearchBar
+            android:id="@+id/panelSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            zoom:editTextHint="@string/zm_hint_search_im_18680"
+            android:layout_toRightOf="@id/btnBack"
+            android:layout_marginRight="16dp"
+            zoom:imeOptions="actionSearch"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/panel_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zm_white">
+        <com.zipow.videobox.view.IMSearchView
+            android:id="@+id/searchResultListView"
+            android:divider="@android:color/transparent"
+            android:background="@drawable/zm_listview_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/panelEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/zm_white"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtEmpty"
+                style="@style/ZMTextView.SettingsItem.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/zm_lbl_search_result_empty"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txtLoadingError"
+                style="@style/ZMTextView.SettingsItem.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/zm_lbl_content_load_error"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtContentLoading"
+                style="@style/ZMTextView.SettingsItem.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/zm_ic_conent_loading"
+                android:gravity="center"
+                android:text="@string/zm_lbl_pull_down_refresh_list_loading"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtEmptyView"
+            style="@style/ZMTextView.SettingsItem.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/zm_white"
+            android:paddingTop="30dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/zm_lbl_search_result_empty"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/txtIBTipsCenter"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/zm_black_2"
+            android:text="@string/zm_mm_information_barries_search_contact_115072"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+</LinearLayout>
